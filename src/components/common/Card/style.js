@@ -1,15 +1,15 @@
 export const styleSheet = {
-  container: {
-    // border: "2px solid blue",
-    // backgroundColor: "#95afc0",
-    margin: "6% 30px",
-    padding: "30px 0",
-    // height: "50vh",
-    width: "95.5%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-  },
+  // container: {
+  //   border: "2px solid blue",
+  //   // backgroundColor: "#95afc0",
+  //   margin: "6% 30px",
+  //   padding: "30px 0",
+  //   height: "95.5%",
+  //   width: "95.5%",
+  //   display: "flex",
+  //   flexDirection: "row",
+  //   justifyContent: "space-around",
+  // },
 
   card: {
     // border: "2px solid deeppink",

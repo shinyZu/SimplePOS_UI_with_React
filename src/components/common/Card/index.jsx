@@ -17,13 +17,7 @@ class MyCard extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Card
-        sx={{ maxWidth: 380 }}
-        className={classes.card}
-        // style={{
-        //   backgroundColor: "trasnparent",
-        // }}
-      >
+      <Card sx={{ maxWidth: 380 }} className={classes.card}>
         <CardActionArea className={classes.card__action__area}>
           <div className={classes.card__img}>
             <CardMedia
@@ -45,11 +39,7 @@ class MyCard extends Component {
             >
               {this.props.title}
             </Typography>
-            <Typography
-              className={classes.card__text}
-              variant="h2"
-              // color="text.secondary"
-            >
+            <Typography className={classes.card__text} variant="h2">
               {this.props.count}
             </Typography>
           </CardContent>

@@ -5,7 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
-  background: #17878f;
+
+  /* background: #17878f; */
+  /* background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png"); */
+  background: #d1d8e0;
+  /* background: #9aecdb; */
   background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
   /* font-family: "Acme", sans-serif; */
 }
