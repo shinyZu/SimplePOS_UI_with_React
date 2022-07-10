@@ -9,6 +9,16 @@ import Paper from "@mui/material/Paper";
 import { styleSheet } from "./style";
 import { withStyles } from "@mui/styles";
 
+// function d(a, b, c, d) {
+//   console.log("imported functioon from Table Component");
+//   console.log(a);
+// }
+
+// function createRow(col1, col2, col3, col4) {
+//   console.log("mmmmmmm");
+//   return { col1, col2, col3, col4 };
+// }
+
 class MyTable extends Component {
   constructor(props) {
     super(props);
@@ -19,21 +29,15 @@ class MyTable extends Component {
   }
 
   render() {
-    const rows = [
-      this.createData("999999991v", "Kamal", "Male", "kamal@gmail.com"),
-      this.createData("999999992v", "Nimali", "Female", "nimali@gmail.com"),
-      this.createData("999999993v", "Vimal", "Male", "vimal@gmail.com"),
-      this.createData("999999994v", "Amali", "Female", "amali@gmail.com"),
-      this.createData("999999995v", "Bimal", "Male", "bimal@gmail.com"),
-    ];
-
-    const data = [
-      this.createData("999999991v", "Kamal", "Male", "kamal@gmail.com"),
-      this.createData("999999992v", "Nimali", "Female", "nimali@gmail.com"),
-      this.createData("999999993v", "Vimal", "Male", "vimal@gmail.com"),
-      this.createData("999999994v", "Amali", "Female", "amali@gmail.com"),
-      this.createData("999999995v", "Bimal", "Male", "bimal@gmail.com"),
-    ];
+    const rows = [];
+    rows.push(
+      this.createData(
+        this.props.data.col1,
+        this.props.data.col2,
+        this.props.data.col3,
+        this.props.data.col4
+      )
+    );
 
     const { classes } = this.props;
 
@@ -52,14 +56,14 @@ class MyTable extends Component {
           <TableBody>
             {rows.map((row) => (
               <TableRow
-                key={row.col1}
+                // key={row.col1}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
                   {row.col1}
                 </TableCell>
-                <TableCell>{row.col2}</TableCell>
                 <TableCell>{row.col3}</TableCell>
+                <TableCell>{row.col2}</TableCell>
                 <TableCell>{row.col4}</TableCell>
               </TableRow>
             ))}
@@ -71,3 +75,4 @@ class MyTable extends Component {
 }
 
 export default withStyles(styleSheet)(MyTable);
+// export { d, createRow };

@@ -6,14 +6,55 @@ import { styleSheet } from "./style";
 import { withStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import MyButton from "../../../components/common/Button";
+import { d } from "../../common/Table";
 
 class MyForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      gender: [{ label: "Male" }, { label: "Female" }],
-      descriptions: [{ label: "Soap" }, { label: "Milk" }, { label: "Eggs" }],
+      inputData: {
+        txt1: "",
+        txt2: "",
+        txt3: "",
+        txt4: "",
+      },
     };
+  }
+
+  handleChange(e) {
+    const { value, name } = e.target;
+    let inputData = this.state.inputData;
+
+    if (name == "txt1") {
+      inputData.txt1 = e.target.value;
+      this.setState({ inputData });
+    } else if (name == "txt3") {
+      inputData.txt3 = e.target.value;
+      this.setState({ inputData });
+    } else if (name == "txt4") {
+      inputData.txt4 = e.target.value;
+      this.setState({ inputData });
+    } else {
+      console.log(e.target.innerText);
+      inputData.txt2 = e.target.innerText;
+      this.setState({ inputData });
+    }
+    console.log(this.state.inputData);
+  }
+
+  handleSaveBtn(e) {
+    console.log("clicked");
+    this.props.onSave(this.state.inputData);
+    // let formData = this.state.inputData;
+  }
+
+  handleClearBtn(e) {
+    console.log("cleared");
+    this.state.inputData.txt1 = "";
+    this.state.inputData.txt2 = "";
+    this.state.inputData.txt3 = "";
+    this.state.inputData.txt4 = "";
+    // this.setState({ inputData: { txt1: "", txt2: "", txt3: "", txt4: "" } });
   }
 
   render() {
@@ -37,6 +78,10 @@ class MyForm extends Component {
                 size={this.props.size}
                 style={{ width: "80%", marginLeft: "10px", fontSize: "50px" }}
                 autoComplete={this.props.auto__complete}
+                name="txt1"
+                onChange={(e) => {
+                  this.handleChange(e);
+                }}
               />
             </Grid>
             <Grid
@@ -57,6 +102,11 @@ class MyForm extends Component {
                   <TextField {...params} placeholder={this.props.field__2} />
                 )}
                 style={{ width: "80%", marginLeft: "10px" }}
+                name="txt2"
+                onChange={(e) => {
+                  console.log(e);
+                  this.handleChange(e);
+                }}
               />
             </Grid>
             <Grid
@@ -78,6 +128,10 @@ class MyForm extends Component {
                   backgroundColor: "transparent",
                 }}
                 autoComplete={this.props.auto__complete}
+                name="txt3"
+                onChange={(e) => {
+                  this.handleChange(e);
+                }}
               />
             </Grid>
             <Grid
@@ -95,6 +149,10 @@ class MyForm extends Component {
                 size={this.props.size}
                 style={{ width: "80%", marginLeft: "10px" }}
                 autoComplete={this.props.auto__complete}
+                name="txt4"
+                onChange={(e) => {
+                  this.handleChange(e);
+                }}
               />
             </Grid>
             <Grid
@@ -121,6 +179,9 @@ class MyForm extends Component {
                   marginRight: "15px",
                   borderColor: "#747d8c",
                 }}
+                onClick={(e) => {
+                  this.handleClearBtn(e);
+                }}
               />
               <MyButton
                 variant={this.props.variant}
@@ -130,6 +191,9 @@ class MyForm extends Component {
                   color: "white",
                   width: "100px",
                   borderColor: "#17878f",
+                }}
+                onClick={(e) => {
+                  this.handleSaveBtn(e);
                 }}
               />
             </Grid>
