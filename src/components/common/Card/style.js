@@ -2,7 +2,7 @@ export const styleSheet = {
   container: {
     // border: "2px solid blue",
     // backgroundColor: "#95afc0",
-    margin: "80px 30px",
+    margin: "6% 30px",
     padding: "30px 0",
     // height: "50vh",
     width: "95.5%",
@@ -13,18 +13,22 @@ export const styleSheet = {
 
   card: {
     // border: "2px solid deeppink",
-    backgroundColor: "#c7ecee !important",
-    // backdropFilter: "brgba(2, 1, 1, 0.432) !important",
+    border: "2px blur",
+    backgroundColor: "#17878f !important",
+    backgroundImage:
+      'url("https://www.transparenttextures.com/patterns/soft-wallpaper.png")',
+    backdropFilter: "rgba(2, 1, 1, 0.432) !important",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     width: "500px",
-    boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.3)",
+    boxShadow: "9px 6px 14px 4px rgb(7 12 8 / 49%) !important",
+    borderRadius: "35px !important",
   },
 
   card__action__area: {
     // border: "2px solid green",
-    backgroundColor: "#95afc0",
+    // backgroundColor: "#95afc0",
     display: "flex",
     flexDirection: "column",
     // justifyContent: "center",
@@ -39,21 +43,24 @@ export const styleSheet = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: "30px",
+    // marginTop: "30px",
   },
 
   card__content: {
     // border: "2px solid red",
-    // lineHeight: "10px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    padding: "10px !important",
+    padding: "0px 0px 30px 0px !important",
     // fontFamily: "Acme !important",
+    // lineHeight: "10px !important",
   },
 
-  card__title: {
+  card__text: {
     // fontFamily: "sans-serif",
+    color: "white",
+    fontWeight: "700 !important",
+    fontFamily: '"Acme", sans-serif !important',
   },
 };

@@ -32,12 +32,32 @@ class NavBar extends Component {
           className={classes.navTabs}
         >
           <div className={classes.navDashBoard}>
-            <Tab icon={<MenuIcon />} label="Dashboard" />
+            <Tab
+              icon={<MenuIcon />}
+              className={classes.nav__text}
+              label="Dashboard"
+              href="/"
+            />
           </div>
           <div className={classes.navPages}>
-            <Tab icon={<PersonIcon />} label="Customers" />
-            <Tab icon={<ShoppingBagIcon />} label="Store" />
-            <Tab icon={<LocalGroceryStoreIcon />} label="Orders" />
+            <Tab
+              icon={<PersonIcon />}
+              className={classes.nav__text}
+              label="Customers"
+              href="/customer"
+            />
+            <Tab
+              icon={<ShoppingBagIcon />}
+              className={classes.nav__text}
+              label="Store"
+              href="/items"
+            />
+            <Tab
+              icon={<LocalGroceryStoreIcon />}
+              className={classes.nav__text}
+              label="Orders"
+              // href="/orders"
+            />
           </div>
         </Tabs>
       </Box>

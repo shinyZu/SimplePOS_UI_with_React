@@ -7,7 +7,7 @@ import { CardActionArea } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import { styleSheet } from "./style";
 import { withStyles } from "@mui/styles";
-import sample_img from "../../../assets/images/question.jpg";
+import sample_img from "../../../assets/images/question1.png";
 
 class MyCard extends Component {
   constructor(props) {
@@ -37,10 +37,19 @@ class MyCard extends Component {
 
           {/* <CardMedia icon={<PersonIcon />} /> */}
           <CardContent className={classes.card__content}>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography
+              className={classes.card__text}
+              // gutterBottom
+              variant="h6"
+              component="div"
+            >
               {this.props.title}
             </Typography>
-            <Typography variant="h2" color="text.secondary">
+            <Typography
+              className={classes.card__text}
+              variant="h2"
+              // color="text.secondary"
+            >
               {this.props.count}
             </Typography>
           </CardContent>

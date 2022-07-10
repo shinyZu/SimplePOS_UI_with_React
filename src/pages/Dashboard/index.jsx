@@ -15,9 +15,9 @@ class Dashboard extends Component {
       <Fragment>
         <NavBar />
         <div className={classes.container}>
-          <MyCard title="Customers" count="10" />
-          <MyCard title="Items" count="12" />
-          <MyCard title="Orders" count="08" />
+          <MyCard title="CUSTOMERS" count="10" />
+          <MyCard title="ITEMS" count="12" />
+          <MyCard title="ORDERS" count="08" />
         </div>
       </Fragment>
     );
