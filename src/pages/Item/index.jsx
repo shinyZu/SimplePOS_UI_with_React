@@ -28,7 +28,12 @@ class ItemPage extends Component {
           auto__complete="off"
           list={this.state.descriptions}
         />
-        <MyTable />
+        <MyTable
+          column1="Item Code"
+          column2="Description"
+          column3="Unit Price"
+          column4="Qty On Hand"
+        />
       </Fragment>
     );
   }

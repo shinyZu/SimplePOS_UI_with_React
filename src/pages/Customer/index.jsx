@@ -28,7 +28,12 @@ class CustomerPage extends Component {
           auto__complete="off"
           list={this.state.gender}
         />
-        <MyTable />
+        <MyTable
+          column1="NIC"
+          column2="Name"
+          column3="Gender"
+          column4="Email"
+        />
       </Fragment>
     );
   }
