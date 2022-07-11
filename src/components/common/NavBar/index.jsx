@@ -8,6 +8,7 @@ import LocalGroceryStoreIcon from "@mui/icons-material/LocalGroceryStore";
 import MenuIcon from "@mui/icons-material/Menu";
 import { styleSheet } from "./styles";
 import { withStyles } from "@mui/styles";
+import { Link, NavLink } from "react-router-dom";
 
 class NavBar extends Component {
   constructor(props) {
@@ -52,6 +53,8 @@ class NavBar extends Component {
               label="Store"
               href="/items"
             />
+            {/* <NavLink to="/items"></NavLink>
+            </Tab> */}
             <Tab
               icon={<LocalGroceryStoreIcon />}
               className={classes.nav__text}
