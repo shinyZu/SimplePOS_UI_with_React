@@ -13,7 +13,7 @@ export const styleSheet = {
 
   card: {
     // border: "2px solid deeppink",
-    border: "2px blur",
+    // border: "2px blur",
     backgroundColor: "#17878f !important",
     backgroundImage:
       'url("https://www.transparenttextures.com/patterns/soft-wallpaper.png")',
@@ -23,11 +23,11 @@ export const styleSheet = {
     alignItems: "center",
     width: "500px",
     boxShadow: "9px 6px 14px 4px rgb(7 12 8 / 49%) !important",
-    borderRadius: "35px !important",
+    borderRadius: "15px !important",
   },
 
   card__action__area: {
-    // border: "2px solid green",
+    border: "2px solid green",
     // backgroundColor: "#95afc0",
     display: "flex",
     flexDirection: "column",

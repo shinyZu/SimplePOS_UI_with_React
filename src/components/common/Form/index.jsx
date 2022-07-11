@@ -23,38 +23,38 @@ class MyForm extends Component {
 
   handleChange(e) {
     const { value, name } = e.target;
+
     let inputData = this.state.inputData;
 
     if (name == "txt1") {
       inputData.txt1 = e.target.value;
-      this.setState({ inputData });
+      // this.setState({ inputData });
     } else if (name == "txt3") {
       inputData.txt3 = e.target.value;
-      this.setState({ inputData });
+      // this.setState({ inputData });
     } else if (name == "txt4") {
       inputData.txt4 = e.target.value;
-      this.setState({ inputData });
+      // this.setState({ inputData });
     } else {
       console.log(e.target.innerText);
+      console.log(this.props.options);
       inputData.txt2 = e.target.innerText;
-      this.setState({ inputData });
+      // this.setState({ inputData });
     }
+
+    this.setState({ inputData });
     console.log(this.state.inputData);
   }
 
   handleSaveBtn(e) {
     console.log("clicked");
     this.props.onSave(this.state.inputData);
-    // let formData = this.state.inputData;
   }
 
   handleClearBtn(e) {
     console.log("cleared");
-    this.state.inputData.txt1 = "";
-    this.state.inputData.txt2 = "";
-    this.state.inputData.txt3 = "";
-    this.state.inputData.txt4 = "";
-    // this.setState({ inputData: { txt1: "", txt2: "", txt3: "", txt4: "" } });
+    this.setState({ inputData: { txt1: "", txt2: "", txt3: "", txt4: "" } });
+    console.log(this.state.inputData);
   }
 
   render() {
@@ -78,7 +78,9 @@ class MyForm extends Component {
                 size={this.props.size}
                 style={{ width: "80%", marginLeft: "10px", fontSize: "50px" }}
                 autoComplete={this.props.auto__complete}
+                // required="true"
                 name="txt1"
+                value={this.state.inputData.txt1}
                 onChange={(e) => {
                   this.handleChange(e);
                 }}
@@ -103,6 +105,8 @@ class MyForm extends Component {
                 )}
                 style={{ width: "80%", marginLeft: "10px" }}
                 name="txt2"
+                ref="ref0"
+                value={this.state.inputData.txt2}
                 onChange={(e) => {
                   console.log(e);
                   this.handleChange(e);
@@ -129,6 +133,7 @@ class MyForm extends Component {
                 }}
                 autoComplete={this.props.auto__complete}
                 name="txt3"
+                value={this.state.inputData.txt3}
                 onChange={(e) => {
                   this.handleChange(e);
                 }}
@@ -150,6 +155,7 @@ class MyForm extends Component {
                 style={{ width: "80%", marginLeft: "10px" }}
                 autoComplete={this.props.auto__complete}
                 name="txt4"
+                value={this.state.inputData.txt4}
                 onChange={(e) => {
                   this.handleChange(e);
                 }}

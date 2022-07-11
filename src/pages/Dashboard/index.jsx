@@ -17,7 +17,7 @@ class Dashboard extends Component {
         <NavBar />
         <div className={classes.container}>
           <div className={classes.card__container}>
-            <MyCard title="CUSTOMERS" count="10" />
+            <MyCard title="CUSTOMERS" count="10" bgColor="#74b9ff" />
             <MyCard title="ITEMS" count="12" />
             <MyCard title="ORDERS" count="08" />
           </div>
