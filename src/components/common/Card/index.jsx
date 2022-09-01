@@ -20,13 +20,15 @@ class MyCard extends Component {
       <Card sx={{ maxWidth: 380 }} className={classes.card}>
         <CardActionArea className={classes.card__action__area}>
           <div className={classes.card__img}>
-            <CardMedia
+            {/* <PersonIcon /> */}
+            {/* <CardMedia
               component="img"
               height="240"
               image={sample_img}
               alt="green iguana"
-              icon={<PersonIcon />}
-            />
+              // icon={<PersonIcon />}
+            /> */}
+            {this.props.icon}
           </div>
 
           {/* <CardMedia icon={<PersonIcon />} /> */}
